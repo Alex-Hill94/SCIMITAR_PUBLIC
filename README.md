@@ -18,7 +18,7 @@ Content to be added includes:
 
 ## About
 
-SCIMITAR is a geometry-based simulation framework designed to optimize chest digital tomosynthesis (DT) systems. The software models X-ray radiation coverage in multi-panel flat panel source (FPS) configurations and uses genetic algorithms to identify optimal device parameters.
+SCIMITAR is a geometry-based simulation framework designed to optimise chest digital tomosynthesis (DT) systems. The software models X-ray radiation coverage in multi-panel flat panel source (FPS) configurations and uses genetic algorithms to identify optimal device parameters.
 
 ### Key Features
 
