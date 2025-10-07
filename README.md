@@ -18,7 +18,7 @@ Content to be added includes:
 
 ## About
 
-SCIMITAR is a geometry-based simulation framework designed to optimize chest digital tomosynthesis (DT) systems. The software models X-ray radiation coverage in multi-panel flat panel source (FPS) configurations and uses genetic algorithms to identify optimal device parameters.
+SCIMITAR is a geometry-based simulation framework designed to optimise chest digital tomosynthesis (DT) systems. The software models X-ray radiation coverage in multi-panel flat panel source (FPS) configurations and uses genetic algorithms to identify optimal device parameters.
 
 ### Key Features
 
@@ -34,9 +34,32 @@ SCIMITAR was developed to design mobile chest DT devices for clinical applicatio
 
 The framework enables rapid exploration of large design spaces to identify configurations that balance imaging performance, engineering feasibility, and clinical requirements.
 
-## Paper Reference
+## Citation
 
-Citation to follow.
+If you use this software in your research, please cite both the software and the source paper:
+
+### Software
+  
+  @software{hill2025scimitar_software,  
+  author = {Hill, Alexander and Aflyatunova, Daliya and Holloway, Fraser},  
+  title = {SCIMITAR: Publicly Available Software},  
+  year = {2025},  
+  publisher = {GitHub},  
+  url = {https://github.com/Alex-Hill94/SCIMITAR_PUBLIC}  
+  }
+
+
+### Paper
+
+  @article{hill2025scimitar,  
+  title = {SCIMITAR: Optimising chest digital tomosynthesis devices using geometric simulations and genetic algorithms},  
+  author = {Hill, A.D. and others},  
+  journal = {TBD},  
+  year = {2025},  
+  note = {In press}  
+  }  
+
+Full paper reference will be added upon publication.
 
 ## Contact
 
