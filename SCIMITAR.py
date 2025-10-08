@@ -8,9 +8,7 @@ from tqdm import tqdm
 import pandas as pd
 
 # Suppress VTK intersection warnings 
-
 vtk.vtkObject.GlobalWarningDisplayOff()
-root_path = '/Users/alexhill/Documents/GitHub/SCIMITAR_PUBLIC/'
 
 class Scimitar():
 

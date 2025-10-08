@@ -716,7 +716,7 @@ def read_body(scale = 1,
                 opacity=0.5):
     s = scale
 
-    init_path = '/Users/alexhill/Documents/GitHub/SCIMITAR_PUBLIC/female/'
+    init_path = '/Users/alexhill/Documents/GitHub/SCIMITAR_PUBLIC/patient/'
 
     actor_dict = dict()
 
