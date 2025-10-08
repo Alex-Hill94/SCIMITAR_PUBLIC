@@ -1,39 +1,48 @@
-# SCIMITAR_PUBLIC
+# **SCIMITAR_PUBLIC**
 
+**Simulating Complete Irradiation Maps and Improving Tomosynthesis in X-ray Radiography**
 
-**SCIMITAR: Simulating Complete Irradiation Maps and Improving Tomosynthesis in X-ray Radiography**
+---
 
-This repository contains the publicly available version of the SCIMITAR software developed for the paper *SCIMITAR: Optimising chest digital tomosynthesis devices using geometric simulations and genetic algorithms* by A.D. Hill et al. 2025 (DOI 10.1088/2057-1976/ae0fa0).
+This repository contains the publicly available version of the **SCIMITAR** software developed for the paper:
 
-## About
+> *Hill, A.D. et al. (2025)* — **SCIMITAR: Optimising chest digital tomosynthesis devices using geometric simulations and genetic algorithms**  
+> DOI: *10.1088/2057-1976/ae0fa0*
 
-SCIMITAR is a Python-based simulation framework for designing and analysing chest digital tomosynthesis (DT) geometries. It models X-ray radiation coverage in multi-panel flat panel source (FPS) configurations via the intersections between distributed X-ray emitters and a detector plane. It computes irradiation maps, evaluates performance metrics, and supports 3D visualisation using VTK. The framework enables rapid exploration of large design spaces to identify configurations that balance imaging performance, engineering feasibility, and clinical requirements.
+---
 
-### 🚧 Repository Status
+## 🧠 Overview
 
-**This repository is currently under active development and is subject to change.**
+**SCIMITAR** is a Python-based framework for designing and analysing **chest digital tomosynthesis (DT)** geometries. It models X-ray radiation coverage in multi-panel flat panel source (FPS) configurations by simulating intersections between distributed X-ray emitters and a detector plane.
 
-### Key Features
+It generates irradiation maps, computes quantitative metrics, and supports interactive 3D visualisation using **VTK** — enabling rapid exploration of large design spaces to balance imaging performance, engineering feasibility, and clinical requirements.
 
-- **Flexible DT Device Design** - Create single- or multi-panel configurations with customisable emitter grids, cone angles, panel orientations, and more.
-- **Irradiation Mapping** - Compute pixel-wise irradiation distributions on user-defined intersection planes.
-- **Quantitative Performance Metrics** - Quantify coverage, emitter overlap, angular range, and stray radiation extents.
-- **3D Visualisation** - View panels, cones, and patient models in an interactive VTK viewer.
+---
 
-## 🧩 Repository Structure
+## ✨ Key Features
 
-| File                  | Description                                                                                               |
-| --------------------- | --------------------------------------------------------------------------------------------------------- |
-| `Run.py`              | Example execution script demonstrating full SCIMITAR workflow                                             |
-| `SCIMITAR.py`         | Main module defining the `Scimitar` class, geometry construction, map generation, and metrics computation |
-| `aux_material.py`     | Auxiliary classes and helper functions for maintaining a clean main class                                 |
-| `clipping_utils.py`   | Functions for computing geometric intersections using VTK                                                 |
-| `read_patient.py`     | Utilities for loading example or illustrative patient objects                                             |
-| `interactor_utils.py` | VTK-based visualisation tools and scene interaction setup                                                 |
+- **Flexible DT device design** – Create single- or multi-panel configurations with custom emitter grids, cone angles, and panel orientations.  
+- **Irradiation mapping** – Compute pixel-wise irradiation distributions on arbitrary intersection planes.  
+- **Quantitative metrics** – Assess coverage, emitter overlap, gantry angle, and stray radiation.  
+- **3D visualisation** – View panels, cones, and patient models in an interactive VTK scene.
 
-### Dependencies
+---
 
-Key Python packages:
+## 📁 Repository Structure
+
+| File | Description |
+|------|--------------|
+| `Run.py` | Example execution script demonstrating a full SCIMITAR workflow |
+| `SCIMITAR.py` | Main module defining the `Scimitar` class and core methods |
+| `aux_material.py` | Helper classes and utility functions supporting the main class |
+| `clipping_utils.py` | VTK-based functions for geometric intersection calculations |
+| `read_patient.py` | Utilities for loading an illustrative patient mesh |
+| `interactor_utils.py` | VTK scene interaction and visualisation utilities |
+
+---
+
+## 🧩 Dependencies
+
 ``` 
 Pillow==10.2.0
 matplotlib==3.8.0
@@ -43,24 +52,30 @@ scipy==1.11.4
 tqdm==4.65.0
 vtk==9.2.6
 ```
-### ⚙️ Installation and Example Use
 
-Clone the repository:
+
+---
+
+## 🚀 Installation & Example Run
+
+Clone and navigate to the repository:
 
 ```
 git clone https://github.com/Alex-Hill94/SCIMITAR_PUBLIC.git
 cd SCIMITAR_PUBLIC
 ```
 
-The simplest way to run SCIMITAR is to execute the provided example:
+Run the example workflow:
 
 ```
 python Run.py
 ```
 
-This script builds a scene containing four panels, each containing a 4×4 grid of square-cone emitters. It generates 2D irradiation maps at detector and mid-height planes, visualises the geometry, and computes and prints performance metrics.
+This builds a 4-panel system (each with a 4×4 emitter grid), computes and plots irradiation maps at detector and mid-height planes, visualises the geometry, and prints performance metrics.
 
-#### Example Output
+---
+
+### Example Console Output
 
 ```
 Acceptable geometry, creating visualisation...
@@ -85,37 +100,44 @@ Acceptable_Stray        1.000000
 Contained_Panels        1.000000
 ```
 
-<img src="example_irmap.png" alt="An example irradiation map computed by SCIMITAR" width="500"/>
-<img src="example_vtk_view.png" alt="An example VTK visualisation of SCIMITAR scene" width="500"/>
+---
 
-#### Select Output Metrics
+### Example Visual Outputs
 
-- Overlap_2D – Quantifies how uniformly a plane (e.g. the detector surface) is irradiated by all emitters.
+<p align="center">
+  <img src="example_irmap.png.png" alt="Example irradiation map computed by SCIMITAR" width="45%"/>
+  <img src="example_vtk_view.png" alt="Example VTK visualisation of SCIMITAR geometry" width="45%"/>
+</p>
 
-- Overlap_3D – Extends the 2D metric into three dimensions by evaluating how well the irradiated volume above the detector is covered. Note - for a meaningful value, set *intersection_heights = full_intersection_heights*.
+---
 
-- Angular range – The maximum angular span between any pair of emitters in the configuration.
+## 📊 Selected Output Metrics
 
-- Stray radiation – The number of detector pixels receiving irradiation outside the defined detector bounds.
+| Metric | Description |
+|---------|--------------|
+| **Overlap_2D** | Uniformity of plane (e.g. detector surface) irradiation by all emitters |
+| **Overlap_3D** | 3D extension of 2D overlap; evaluates volumetric coverage (requires `intersection_heights = full_intersection_heights`) |
+| **Angular Range** | Maximum angular span between any pair of emitters |
+| **Stray Radiation** | Number of detector pixels irradiated outside the detector bounds |
 
-### Typical Workflow
+---
 
-- Modify geometry parameters in Run.py (e.g., number of emitters, cone angle, or panel tilt).
+## 🔄 Typical Workflow
 
-- Generate irradiation maps via S.Irradiation().
+1. Modify input parameters in `Run.py` (e.g. cone angle, emitter count, panel tilt).  
+2. Generate irradiation maps with `S.Irradiation()`.  
+3. Evaluate metrics via `S.Metrics()`.  
+4. Visualise geometry using `S.Visualise()`.  
+5. Export results from the DataFrame `S.df`.
 
-- Evaluate metrics using S.Metrics().
+---
 
-- Visualise geometry and intersections using S.Visualise().
+## 📚 Citation
 
-- Export results from the DataFrame S.df.
-
-## Citation
-
-If you use this software in your research, please cite both the software and the source paper:
+If you use **SCIMITAR** in your research, please cite both the software and the associated paper:
 
 ### Software
-  
+```
   @software{hill2025scimitar_software,  
   author = {Hill, Alexander and Aflyatunova, Daliya and Holloway, Fraser},  
   title = {SCIMITAR: Publicly Available Software},  
@@ -124,25 +146,36 @@ If you use this software in your research, please cite both the software and the
   url = {https://github.com/Alex-Hill94/SCIMITAR_PUBLIC}  
   }
 
-### Paper
+```
 
-  @article{hill2025scimitar,  
+### Paper
+```  
+@article{hill2025scimitar,  
   title = {SCIMITAR: Optimising chest digital tomosynthesis devices using geometric simulations and genetic algorithms},  
   author = {Hill, A.D. and others},  
   journal = {TBD},  
   year = {2025},  
   note = {In press}  
   }  
-
-Full paper reference will be added upon publication.
-
-## Contact
-
-For questions or inquiries about this software, please contact a.d.hill@liverpool.ac.uk.
-
-## Acknowledgments
-
-This work was developed in collaboration with Adaptix Ltd., pioneers in cold-cathode X-ray emitter array technology for flat panel source imaging systems.
+```
+> The paper is currently available as an accepted manuscript. Full citation details will be added upon publication.
 
 ---
 
+## 📬 Contact
+
+For questions or inquiries, please contact  
+**a.d.hill@liverpool.ac.uk**
+
+---
+
+## 🤝 Acknowledgments
+
+Developed in collaboration with **Adaptix Ltd.**, pioneers in novel X-ray imaging technologies.
+
+---
+
+### 🔗 Useful Links
+- [Adaptix Ltd.](https://www.adaptix.com)
+- [VTK Documentation](https://vtk.org/documentation/)
+- [QUASAR Group](https://www.youtube.com/watch?v=ezp9lAFdRdU)
