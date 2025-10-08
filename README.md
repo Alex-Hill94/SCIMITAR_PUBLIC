@@ -105,7 +105,7 @@ Contained_Panels        1.000000
 ### Example Visual Outputs
 
 <p align="center">
-  <img src="example_irmap.png.png" alt="Example irradiation map computed by SCIMITAR" width="45%"/>
+  <img src="example_irmap.png" alt="Example irradiation map computed by SCIMITAR" width="45%"/>
   <img src="example_vtk_view.png" alt="Example VTK visualisation of SCIMITAR geometry" width="45%"/>
 </p>
 
@@ -158,7 +158,8 @@ If you use **SCIMITAR** in your research, please cite both the software and the 
   note = {In press}  
   }  
 ```
-> The paper is currently available as an accepted manuscript. Full citation details will be added upon publication.
+
+The paper is currently available as an accepted manuscript. Full citation details will be added upon publication.
 
 ---
 
