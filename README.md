@@ -85,10 +85,8 @@ Acceptable_Stray        1.000000
 Contained_Panels        1.000000
 ```
 
-![An example irradiation map computed by SCIMITAR](example_irmap.png "Irradiation at detector layer").
-
-![An example VTK visualisation of SCIMITAR scene](example_vtk_view.png "VTK Visualisation").
-
+<img src="example_irmap.png" alt="An example irradiation map computed by SCIMITAR" width="200"/>
+<img src="example_vtk_view.png" alt="An example VTK visualisation of SCIMITAR scene" width="200"/>
 
 ### 📊 Typical Workflow
 
