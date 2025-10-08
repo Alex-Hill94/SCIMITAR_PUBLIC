@@ -3,18 +3,7 @@
 
 **SCIMITAR: Optimising chest digital tomosynthesis devices using geometric simulations and genetic algorithms**
 
-This repository contains the publicly available version of the SCIMITAR software developed for the paper by A.D. Hill et al.
-
-## 🚧 Repository Status
-
-**This repository is currently under construction and will be populated prior to full publication.**
-
-Content to be added includes:
-- Source code
-- Documentation
-- Example configurations
-- Usage instructions
-- Installation guide
+This repository contains the publicly available version of the SCIMITAR software developed for the paper by A.D. Hill et al. (DOI 10.1088/2057-1976/ae0fa0).
 
 ## About
 
@@ -34,6 +23,32 @@ SCIMITAR was developed to design mobile chest DT devices for clinical applicatio
 
 The framework enables rapid exploration of large design spaces to identify configurations that balance imaging performance, engineering feasibility, and clinical requirements.
 
+## 🚧 Repository Status
+
+**This repository is currently under active development and is subject to change.**
+
+Package versions used by SCIMITAR:
+
+``` 
+Pillow==10.2.0
+matplotlib==3.8.0
+numpy==1.26.3
+pandas==1.3.4
+scipy==1.11.4
+tqdm==4.65.0
+vtk==9.2.6
+```
+
+
+
+Content to be added includes:
+- Source code
+- Documentation
+- Example configurations
+- Usage instructions
+- Installation guide
+
+
 ## Citation
 
 If you use this software in your research, please cite both the software and the source paper:
@@ -47,7 +62,6 @@ If you use this software in your research, please cite both the software and the
   publisher = {GitHub},  
   url = {https://github.com/Alex-Hill94/SCIMITAR_PUBLIC}  
   }
-
 
 ### Paper
 
@@ -71,4 +85,3 @@ This work was developed in collaboration with Adaptix Ltd., pioneers in cold-cat
 
 ---
 
-**Full repository content coming soon.**

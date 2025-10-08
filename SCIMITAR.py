@@ -5,7 +5,6 @@ from matplotlib import patches, lines, colors, cm
 import interactor_utils
 from aux_material import *
 from tqdm import tqdm
-import h5py as h5
 import pandas as pd
 
 # Suppress VTK intersection warnings 
