@@ -85,8 +85,8 @@ Acceptable_Stray        1.000000
 Contained_Panels        1.000000
 ```
 
-<img src="example_irmap.png" alt="An example irradiation map computed by SCIMITAR" width="200"/>
-<img src="example_vtk_view.png" alt="An example VTK visualisation of SCIMITAR scene" width="200"/>
+<img src="example_irmap.png" alt="An example irradiation map computed by SCIMITAR" width="500"/>
+<img src="example_vtk_view.png" alt="An example VTK visualisation of SCIMITAR scene" width="500"/>
 
 ### 📊 Typical Workflow
 
@@ -100,18 +100,15 @@ Contained_Panels        1.000000
 
 - Export results from the DataFrame S.df.
 
-### 📈 Output Metrics
+### 📈 Select Output Metrics
 
-The S.Metrics() method computes:
+- Overlap_2D – Quantifies how uniformly a plane (e.g. the detector surface) is irradiated by all emitters.
 
-- Coverage – detector area irradiated by all emitters.
+- Overlap_3D – Extends the 2D metric into three dimensions by evaluating how well the irradiated volume above the detector is covered. Note - for a meaningful value, set *intersection_heights = full_intersection_heights*.
 
-- Overlap – degree of cone intersection between panels.
+- Angular range – The maximum angular span between any pair of emitters in the configuration.
 
-- Angular range – angular coverage of source trajectories.
-
-- Stray radiation – projected emission outside detector bounds.
-
+- Stray radiation – The number of detector pixels receiving irradiation outside the defined detector bounds.
 
 ## Citation
 
