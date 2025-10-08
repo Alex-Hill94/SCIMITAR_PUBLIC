@@ -20,7 +20,7 @@ SCIMITAR is a Python-based simulation framework for designing and analysing ches
 - **Quantitative Performance Metrics** - Quantify coverage, emitter overlap, angular range, and stray radiation extents.
 - **3D Visualisation** - View panels, cones, and patient models in an interactive VTK viewer.
 
-### 🧩 Repository Structure
+## 🧩 Repository Structure
 
 | File                  | Description                                                                                               |
 | --------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -88,7 +88,17 @@ Contained_Panels        1.000000
 <img src="example_irmap.png" alt="An example irradiation map computed by SCIMITAR" width="500"/>
 <img src="example_vtk_view.png" alt="An example VTK visualisation of SCIMITAR scene" width="500"/>
 
-### 📊 Typical Workflow
+#### Select Output Metrics
+
+- Overlap_2D – Quantifies how uniformly a plane (e.g. the detector surface) is irradiated by all emitters.
+
+- Overlap_3D – Extends the 2D metric into three dimensions by evaluating how well the irradiated volume above the detector is covered. Note - for a meaningful value, set *intersection_heights = full_intersection_heights*.
+
+- Angular range – The maximum angular span between any pair of emitters in the configuration.
+
+- Stray radiation – The number of detector pixels receiving irradiation outside the defined detector bounds.
+
+### Typical Workflow
 
 - Modify geometry parameters in Run.py (e.g., number of emitters, cone angle, or panel tilt).
 
@@ -99,16 +109,6 @@ Contained_Panels        1.000000
 - Visualise geometry and intersections using S.Visualise().
 
 - Export results from the DataFrame S.df.
-
-### 📈 Select Output Metrics
-
-- Overlap_2D – Quantifies how uniformly a plane (e.g. the detector surface) is irradiated by all emitters.
-
-- Overlap_3D – Extends the 2D metric into three dimensions by evaluating how well the irradiated volume above the detector is covered. Note - for a meaningful value, set *intersection_heights = full_intersection_heights*.
-
-- Angular range – The maximum angular span between any pair of emitters in the configuration.
-
-- Stray radiation – The number of detector pixels receiving irradiation outside the defined detector bounds.
 
 ## Citation
 
