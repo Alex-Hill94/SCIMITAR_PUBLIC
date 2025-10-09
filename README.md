@@ -176,6 +176,12 @@ Developed in collaboration with **Adaptix Ltd.**, pioneers in novel X-ray imagin
 
 ---
 
+## 👨‍🔬 Authors
+
+Alexander Hill, Fraser Holloway, and Daliya Aflyatunova.
+
+---
+
 ### 🔗 Useful Links
 - [Adaptix Ltd.](https://www.adaptix.com)
 - [VTK Documentation](https://vtk.org/documentation/)
